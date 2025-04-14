@@ -1,6 +1,6 @@
 # 0xMONK MCP Server
 
-A Master Control Program (MCP) server for interacting with the 0xMONK Trading Agent API.
+A Model Conntext Protocol (MCP) server for interacting with the 0xMONK Trading Agent API.
 
 ## Overview
 
