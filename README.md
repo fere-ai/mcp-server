@@ -51,6 +51,9 @@ This project provides a suite of tools for AI assistants to interact with the 0x
    ```
 
 4. Configure environment variables:
+
+ Get your FereAI Key from [https://docs.fereai.xyz/docs/api/api_access](https://docs.fereai.xyz/docs/api/api_access) and set it in the `.env` file.
+
    ```bash
    cp .env.example .env
    # Edit .env with your configuration
