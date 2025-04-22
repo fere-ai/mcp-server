@@ -23,9 +23,14 @@ This project provides a suite of tools for AI assistants to interact with the 0x
   - Monitor task status
 
 - **Portfolio Management**
+
   - Monitor agent portfolios, holdings, and trade history
   - Access trading decisions and calls made by agents
   - Get wallet details for agents and Telegram users
+
+- **ProAgent Interaction**
+  - Query the ProAgent for market information and trading insights
+  - Get real-time cryptocurrency prices and market data
 
 ## Installation
 
@@ -52,12 +57,12 @@ This project provides a suite of tools for AI assistants to interact with the 0x
 
 4. Configure environment variables:
 
- Get your FereAI Key from [https://docs.fereai.xyz/docs/api/api_access](https://docs.fereai.xyz/docs/api/api_access) and set it in the `.env` file.
+Get your FereAI Key from [https://docs.fereai.xyz/docs/api/api_access](https://docs.fereai.xyz/docs/api/api_access) and set it in the `.env` file.
 
-   ```bash
-   cp .env.example .env
-   # Edit .env with your configuration
-   ```
+```bash
+cp .env.example .env
+# Edit .env with your configuration
+```
 
 ## Usage
 
@@ -83,6 +88,7 @@ FereAI-MCP/
     ├── agent.py          # Agent-related API functions
     ├── config.py         # Configuration module
     ├── main.py           # MCP server implementation
+    ├── pro_agent.py      # Pro Agent implementation
     └── utils.py          # Utility functions
 ```
 
