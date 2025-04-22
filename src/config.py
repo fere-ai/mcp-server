@@ -8,6 +8,7 @@ load_dotenv()
 MONK_API_BASE = os.getenv("MONK_API_BASE", "https://api.fereai.xyz/ta")
 ORIGIN = os.getenv("ORIGIN", "monk-mcp/1.0")
 API_KEY = os.getenv("API_KEY")
+USER_ID = os.getenv("USER_ID")
 REQUEST_TIMEOUT = float(os.getenv("REQUEST_TIMEOUT", "30.0"))
 
 # Server Configuration

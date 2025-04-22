@@ -10,6 +10,7 @@ from src.agent import (
     get_agent_buy_recommendation, get_task_status, get_wallet_details, 
     get_tg_wallet_details
 )
+from src.pro_agent import get_pro_agent_response
 
 # Initialize FastMCP server
 mcp = FastMCP(MCP_NAME)
@@ -239,6 +240,22 @@ async def sync_agent_state(agent_id: str) -> Dict[str, Any]:
         agent_id: UUID of the agent
     """
     return await sync_agent(agent_id)
+
+@mcp.tool()
+async def get_pro_agent_reply(message: str) -> Dict[str, Any]:
+    """Get a response from the ProAgent.
+    
+    Args:
+        message: The message to send to the ProAgent
+    """
+    try:
+        # Use asyncio.to_thread to run the synchronous function in a separate thread
+        # This prevents blocking the event loop when calling run_until_complete inside get_pro_agent_response
+        import asyncio
+        response = await asyncio.to_thread(get_pro_agent_response, message)
+        return {"response": response, "status": "success"}
+    except Exception as e:
+        return {"error": str(e), "status": "error"}
 
 if __name__ == "__main__":
     # Initialize and run the server
